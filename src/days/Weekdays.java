@@ -6,38 +6,20 @@ package days;
 
 /**
  *
- * @author sivagamasrinivasan
+ * @author sivagamasrinivasan and danielbajenov
  */
-public class Weekdays 
-{
-  public void nameOfDay(String code)
-     {
-    switch(code.toUpperCase())
-      {
-      case "ONE":
-        System.out.println("Monday");
-        break;
-      case "TWO":
-        System.out.println("Tuesday");
-        break;
-      case "THREE":
-        System.out.println("Wednesday");
-        break;
-      case "FOUR":
-        System.out.println("Thursday");
-        break;
-      case "FIVE":
-        System.out.println("Friday");
-        break;
-      case "SIX":
-        System.out.println("Saturday");
-        break;
-      case "SEVEN":
-        System.out.println("Sunday");
-        break;
+
+public enum Weekdays {
+    MONDAY, 
+    TUESDAY, 
+    WEDNESDAY, 
+    THURSDAY, 
+    FRIDAY, 
+    SATURDAY, 
+    SUNDAY;
+
+    public void printDayName() {
+        String formattedName = this.name().charAt(0) + this.name().substring(1).toLowerCase();
+        System.out.println(formattedName);
     }
-  
 }
-}
-
-
